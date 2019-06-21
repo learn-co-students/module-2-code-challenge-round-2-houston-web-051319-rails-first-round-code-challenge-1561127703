@@ -9,10 +9,14 @@ class HeroinesController < ApplicationController
     @powers=Power.all
   end
   def create
-    byebug
+ 
     x = Heroine.create(hero_params[:hero])
-    byebug
+   
     redirect_to "/heroines/#{x.id}"
+  end
+  def search
+    byebug
+    @power = Power.find_by(name: power_params[:name])
   end
   def hero_params
     params.permit(
@@ -22,5 +26,10 @@ class HeroinesController < ApplicationController
         :power_id
       ]
     )
+    end
+    def power_params
+      params.permit(
+        :name
+      )
     end
 end

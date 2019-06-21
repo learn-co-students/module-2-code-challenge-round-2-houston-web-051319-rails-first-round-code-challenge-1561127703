@@ -6,7 +6,7 @@
   <input type="submit" value="submit">
 </form>
 <ul>
-  <% @heroines.each do |heroine| %>
+  <% @power.heroines.each do |heroine| %>
     <li><a href="/heroines/<%=heroine.id%>"><%= heroine.super_name %></a></li>
     <br>
   <% end %>
