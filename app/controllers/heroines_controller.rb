@@ -15,7 +15,7 @@ class HeroinesController < ApplicationController
     redirect_to "/heroines/#{x.id}"
   end
   def search
-    byebug
+    
     @power = Power.find_by(name: power_params[:name])
   end
   def hero_params
