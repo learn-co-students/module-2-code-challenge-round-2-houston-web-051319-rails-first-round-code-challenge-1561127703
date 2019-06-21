@@ -1,0 +1,23 @@
+
+<%= form_with(model: @heroines, local: true) do |form| %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :super_name %>
+    <%= form.text_field :super_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :power_id %>
+    <%= form.number_field :power_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+
+<% end %>
