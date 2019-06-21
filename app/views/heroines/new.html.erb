@@ -1,0 +1,30 @@
+<h1>Add Post</h1>
+
+<%=form_for @heroine, url: heroines_path do |f| %>
+        <% if @heroine.errors.any? %>
+            <% @heroine.errors.full_messages.each do |msg| %>
+            <div class="alert alert-danger" ><%= msg %></div>
+            <% end %>
+        <% end %>
+
+
+    <p>
+        <%= f.label :name %><br>
+        <%= f.text_field :name %>
+    </p>
+
+    <p>
+        <%= f.label :super_name %><br>
+        <%= f.text_area :super_name %>
+    </p>
+
+    <p>
+        <%= f.label :power_id %><br>
+        <%= f.number_field :power_id %>
+    </p>
+
+    <p>
+        <%= f.submit%><br>
+        
+    </p>
+        <% end %>

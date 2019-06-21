@@ -2,9 +2,9 @@
 
 <ul>
   <% @heroines.each do |heroine| %>
-    <li>
-      <%= heroine.super_name %>
-    </li>
-    <br>
+    <div class= "well">
+      <h3><%= heroine.super_name %></h3>
+    <%= link_to heroine.super_name, heroine_path(heroine), :class => 'btn btn-default' %>
+    </div>
   <% end %>
 </ul>
